@@ -1,0 +1,8 @@
+jaffle_shop_metrics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "jaffle_shop_with_metrics.duckdb"
+      # settings:
+      #   access_mode: READ_ONLY

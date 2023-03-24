@@ -1,0 +1,25 @@
+version: 2
+
+analyses:
+  - name: revenue
+    description: Get product revenue in different granulary for different customers
+    config:  &config
+      jinjat:
+        method: get
+        openapi:
+          parameters:
+            - in: query
+              name: grain
+              schema:
+                type: string
+                enum: ['week', 'month']
+                default: week
+  - name: profit
+    description: Get profit for different customers
+    config: *config
+  - name: expenses
+    description: Get product expenses
+    config: *config
+  - name: average_order_amount
+    description: Get average basket size
+    config: *config

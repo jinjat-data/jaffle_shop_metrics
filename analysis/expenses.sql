@@ -1,6 +1,8 @@
+{%- set query_params = request().query %}
+
 select * 
 from {{ metrics.calculate(
     metric('expenses'),
-    grain='week',
+    grain=query_params.grain,
     dimensions=[],
 ) }}
