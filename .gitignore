@@ -4,3 +4,4 @@ dbt_packages/
 logs/
 **/.DS_Store
 jaffle_shop_with_metrics.duckdb
+jaffle_shop_with_metrics.duckdb.wal
