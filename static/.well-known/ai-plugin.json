@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "ACME Company Data",
+    "name_for_model": "acme_company_data",
+    "description_for_human": "Plugin for fetching the company data including business metrics including website, marketing, finance data",
+    "description_for_model": "Plugin for fetching the company data including business metrics including website, marketing, finance data",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:8581/current/openapi.json",
+        "is_user_authenticated": false
+    },
+    "logo_url": "https://jinjat.com/img/logo.png",
+    "contact_email": "support@example.com",
+    "legal_info_url": "http://www.example.com/legal"
+}

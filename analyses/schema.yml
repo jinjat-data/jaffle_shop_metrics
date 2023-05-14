@@ -3,7 +3,7 @@ version: 2
 analyses:
   - name: revenue
     description: Get product revenue in different granulary for different customers
-    config:  &config
+    config: &config
       jinjat:
         method: get
         openapi:

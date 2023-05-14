@@ -1,0 +1,8 @@
+version: '2'
+services:
+  api:
+    build:
+      dockerfile: ./Dockerfile
+    command: serve
+    ports:
+      - 8581:8581

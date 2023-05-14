@@ -1,0 +1,11 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "DuckDB",
+            "name": "db",
+            "database": "${workspaceFolder:jaffle_shop_metrics}/jaffle_shop_with_metrics.duckdb"
+        }
+    ]
+}

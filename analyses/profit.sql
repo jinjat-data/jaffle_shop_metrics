@@ -1,8 +1,8 @@
-{%- set query_params = request().query %}
+{%- set query_params = jinjat.request().query %}
 
 select * 
 from {{ metrics.calculate(
-    metric('revenue'),
+    metric('profit'),
     grain=query_params.grain,
     dimensions=['customer_status']
 ) }}
