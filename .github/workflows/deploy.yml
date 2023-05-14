@@ -5,6 +5,7 @@ on:
 
 jobs:
   release:
+    environment: prod
     runs-on: "ubuntu-latest"
     permissions:
       contents: "read"
