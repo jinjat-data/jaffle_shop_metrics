@@ -1,0 +1,11 @@
+{
+    "name": "jaffle-shop-metrics",
+    "options": {
+        "allow-unauthenticated": false,
+        "memory": "512Mi",
+        "cpu": "1",
+        "port": 8581,
+        "concurrency": 80,
+        "max-instances": 1
+    }
+}

@@ -8,3 +8,5 @@ COPY . /project
 
 ENV DBT_PROJECT_DIR=/project
 ENV DBT_PROJECT_DIR=/project
+
+ENTRYPOINT ["poetry", "run", "jinjat", "serve" ]

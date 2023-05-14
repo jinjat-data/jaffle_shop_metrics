@@ -1,7 +1,7 @@
-## Jaffle Shop Metrics 
+## Jaffle Shop Metrics Jinjat Data App
 In case you are unfamiliar with the jaffle_shop dataset and dbt example project, I highly recommend you first review this [repository](https://github.com/dbt-labs/jaffle_shop) to familiarize yourself with it. This project builds on top of it to demonstrate a simple example of a metrics implementation with dbt Metrics functionality.
 
-#### **This repo has been updated to work with dbt v1.3**
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
 ### Differences From Jaffle Shop
 There are a few differences in this example project when compared directly to 
