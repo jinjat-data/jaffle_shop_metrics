@@ -2,7 +2,7 @@ version: 2
 
 analyses:
   - name: revenue
-    description: Get product revenue in different granulary for different customers
+    description: Get product revenue.
     config: &config
       jinjat:
         method: get
@@ -14,12 +14,13 @@ analyses:
                 type: string
                 enum: ['week', 'month']
                 default: week
+                description: Use this field to filter the data for different granularies.
   - name: profit
-    description: Get profit for different customers
+    description: Get profit from product subscriptions
     config: *config
   - name: expenses
-    description: Get product expenses
+    description: Get product expenses for all the company
     config: *config
   - name: average_order_amount
-    description: Get average basket size
+    description: Analyze users's average basket data
     config: *config
