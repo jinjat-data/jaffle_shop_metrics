@@ -1,23 +1,23 @@
 on:
   push:
     branches:
-      - 'main'
-      
+      - "main"
+
 jobs:
   release:
-    runs-on: 'ubuntu-latest'
+    runs-on: "ubuntu-latest"
     permissions:
-      contents: 'read'
-      id-token: 'write'
+      contents: "read"
+      id-token: "write"
     steps:
-      - uses: 'actions/checkout@v3'
-      - uses: 'google-github-actions/auth@v1'
+      - uses: "actions/checkout@v3"
+      - uses: "google-github-actions/auth@v1"
         with:
-         credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
-      - id: 'deploy'
-        uses: 'google-github-actions/deploy-cloudrun@v1'
+          credentials_json: "${{ secrets.GOOGLE_CREDENTIALS }}"
+      - id: "deploy"
+        uses: "google-github-actions/deploy-cloudrun@v1"
         with:
-          service: 'jaffle_shop_metrics'
-          source: '.'
-      - name: 'Use output'
+          service: "jaffle_shop_metrics"
+          source: "."
+      - name: "Use output"
         run: 'curl "${{ steps.deploy.outputs.url }}"'
