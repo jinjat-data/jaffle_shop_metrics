@@ -8,5 +8,7 @@ COPY . /project
 
 ENV DBT_PROJECT_DIR=/project
 ENV DBT_PROJECT_DIR=/project
+ENV JINJAT_HOST=0.0.0.0
+ENV JINJAT_PORT=8080
 
-ENTRYPOINT ["poetry", "run", "jinjat", "serve" ]
+ENTRYPOINT ["poetry", "run", "jinjat", "serve"]
