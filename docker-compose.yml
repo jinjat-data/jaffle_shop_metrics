@@ -6,3 +6,5 @@ services:
     command: serve
     ports:
       - 8581:8581
+    environment:
+      - JINJAT_PORT=8581

@@ -20,5 +20,7 @@ jobs:
         with:
           service: "jaffle-shop-metrics2"
           source: "."
+          env_vars: |
+            JINJAT_PORT=8080
       - name: "Use output"
         run: 'curl "${{ steps.deploy.outputs.url }}"'
