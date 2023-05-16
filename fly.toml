@@ -1,8 +1,10 @@
-
-app = "damp-feather-3839"
+app = "jinjat-demo"
 kill_signal = "SIGINT"
 kill_timeout = 5
+primary_region = "lhr"
 processes = []
+
+[build]
 
 [env]
 

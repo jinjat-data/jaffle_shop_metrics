@@ -4,23 +4,13 @@ on:
       - "main"
 
 jobs:
-  release:
-    environment: prod
-    runs-on: "ubuntu-latest"
-    permissions:
-      contents: "read"
-      id-token: "write"
-    steps:
-      - uses: "actions/checkout@v3"
-      - uses: "google-github-actions/auth@v1"
-        with:
-          credentials_json: "${{ secrets.GOOGLE_CREDENTIALS }}"
-      - id: "deploy"
-        uses: "google-github-actions/deploy-cloudrun@v1"
-        with:
-          service: "jaffle-shop-metrics2"
-          source: "."
-          env_vars: |
-            JINJAT_PORT=8080
-      - name: "Use output"
-        run: 'curl "${{ steps.deploy.outputs.url }}"'
+  deploy:
+      environment: prod
+      name: Deploy app
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - uses: superfly/flyctl-actions/setup-flyctl@master
+        - run: flyctl deploy --remote-only
+          env:
+            FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

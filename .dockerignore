@@ -1,1 +1,3 @@
 fly.toml
+dbt_packages/*
+jaffle_shop_with_metrics.duckdb*
