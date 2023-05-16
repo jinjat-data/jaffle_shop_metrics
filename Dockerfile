@@ -9,6 +9,6 @@ COPY . /project
 ENV DBT_PROJECT_DIR=/project
 ENV DBT_PROFILES_DIR=/project
 
-RUN poetry run dbt deps && poetry run dbt seed && poetry run dbt compile
+RUN poetry run dbt deps && poetry run dbt seed && poetry run dbt run
 
 ENTRYPOINT ["poetry", "run", "jinjat", "serve"]
