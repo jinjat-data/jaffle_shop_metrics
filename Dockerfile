@@ -2,7 +2,9 @@ FROM jinjat/jinjat:latest
 
 RUN apt update -qq && \
     apt install -y build-essential curl git wget gcc
-RUN pip install dbt-duckdb
+RUN poetry add dbt-duckdb@^1.5.0 && poetry install
+
+RUN poetry run dbt deps && poetry run dbt seed && poetry run dbt compile
 
 COPY . /project
 
