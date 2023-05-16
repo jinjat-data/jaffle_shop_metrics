@@ -1,3 +1,8 @@
+# fly.toml app configuration file generated for jinjat-demo on 2023-05-16T23:52:38+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = "jinjat-demo"
 kill_signal = "SIGINT"
 kill_timeout = 5
